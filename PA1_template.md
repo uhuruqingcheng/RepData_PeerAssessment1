@@ -1,5 +1,5 @@
 # PA1_template
-qingcheng  
+Qingcheng  
 Sunday, August 17, 2014  
 
 # Reproducible Research: Peer Assessment 1
@@ -169,7 +169,8 @@ tpi = aggregate(steps ~ interval + DayType, data_filled, sum)
 
 ```r
 library(lattice)
-xyplot(steps ~ interval | DayType, data=tpi, layout=c(1,2), type="l", ylab="Number of steps", xlab="Interval")
+xyplot(steps ~ interval | DayType, data=tpi, 
+       layout=c(1,2), type="l", ylab="Number of steps", xlab="Interval")
 ```
 
 ![plot of chunk unnamed-chunk-15](./PA1_template_files/figure-html/unnamed-chunk-15.png) 

@@ -1,11 +1,11 @@
 ---
 title: "PA1_template"
-author: "qingcheng"
+author: "Qingcheng"
 date: "Sunday, August 17, 2014"
 output:
   html_document:
-    fig_caption: yes
     keep_md: yes
+  pdf_document: default
 ---
 
 # Reproducible Research: Peer Assessment 1
@@ -138,5 +138,6 @@ tpi = aggregate(steps ~ interval + DayType, data_filled, sum)
 * Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 ```{r}
 library(lattice)
-xyplot(steps ~ interval | DayType, data=tpi, layout=c(1,2), type="l", ylab="Number of steps", xlab="Interval")
+xyplot(steps ~ interval | DayType, data=tpi, 
+       layout=c(1,2), type="l", ylab="Number of steps", xlab="Interval")
 ```
